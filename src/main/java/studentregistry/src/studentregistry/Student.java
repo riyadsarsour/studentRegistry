@@ -1,8 +1,13 @@
 package studentregistry;
+import java.io.Serializable;
 
-class Student {
+class Student implements Serializable{
 
-    // private so need to set getter/setter methods
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	// private so need to set getter/setter methods
     private String studentName = null;
     private Integer studentID = 0;
     private String[] subjects = null;
@@ -49,6 +54,6 @@ class Student {
             subjectLister.append(subject + "\n");
         }
 
-        return "Student Name: " + this.studentName + "\nStudent ID: " + this.studentID + "Subject:\n" + subjectLister ;
+        return "Student Name: " + this.studentName + "\nStudent ID: " + this.studentID + "\n List Subject Enrollment:\n" + subjectLister ;
     }
 }
